@@ -1,6 +1,12 @@
 package fr.lernejo.travelsite;
 
 public class Travels {
-    private String country;
-    private Number temperature;
+    public String country;
+    public Number temperature;
+
+    Travels(String country, Number temperature){
+        this.temperature =temperature;
+        this.country = country;
+    }
+
 }

@@ -1,9 +1,9 @@
 package fr.lernejo.travelsite;
 
 public class Inscription {
-private String userEmail;
-private String userName;
-private String userCountry;
-private  WeatherExpectation weatherExpectation;
-private  int minimumTemperatureDistance;
+    public String userEmail;
+    public String userName;
+    public String userCountry;
+    public   WeatherExpectation weatherExpectation;
+    public   int minimumTemperatureDistance;
 }

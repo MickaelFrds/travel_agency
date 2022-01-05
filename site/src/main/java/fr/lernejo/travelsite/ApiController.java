@@ -14,16 +14,13 @@ public class ApiController {
     public final ArrayList<Inscription> ListInscription = new ArrayList<>() ;
 
     @PostMapping("/api/inscription")
-    public void addInscription (@RequestBody Inscription user){
-    ListInscription.add(user);
-    }
-
-    @GetMapping("/api/travels?userName={userName}")
-    public ListTravels getTravels(@RequestBody ListTravels list){
-        return list;
-    }
+    public void addInscription (@RequestBody Inscription user){ListInscription.add(user);}
 
 
-
+    @GetMapping( "/api/travels")
+    public ArrayList<Travels> getTravels(@RequestParam  String userName ){
+        ListTravels list = new ListTravels();
+        list.listTravels.add(new Travels("Portugal",22));
+        return list.listTravels;
     }
 }
