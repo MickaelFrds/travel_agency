@@ -3,6 +3,11 @@ package fr.lernejo.prediction;
 import java.util.Date;
 
 public class TempAndDate {
-    Number temperature;
-    Date date;
+    public Number temperature;
+    public String date;
+
+    TempAndDate(Number temperature,String date){
+        this.date = date;
+        this.temperature = temperature;
+    }
 }

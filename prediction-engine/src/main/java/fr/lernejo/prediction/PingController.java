@@ -1,8 +1,6 @@
 package fr.lernejo.prediction;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PingController {
@@ -12,8 +10,12 @@ public class PingController {
         return "OK";
     }
 
-    @GetMapping( "/api/temperature?country={country}")
-    public Temperature getTemperature(@RequestBody Temperature ListTempOfCountry) {
-        return ListTempOfCountry;
+    @GetMapping( "/api/temperature")
+    public ListTemperature getTemperature(@RequestParam String country) {
+        TemperatureService temperatureService = new TemperatureService();
+        ListTemperature listTempOfCountry = new ListTemperature();
+        listTempOfCountry.listTemperatures.add(new TempAndDate(temperatureService.getTemperature(country), "2022-01-04"));
+        listTempOfCountry.listTemperatures.add(new TempAndDate(temperatureService.getTemperature(country), "2022-01-05"));
+        return listTempOfCountry;
     }
 }
