@@ -1,5 +1,4 @@
 package fr.lernejo.travelsite;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +10,7 @@ public class Launcher {
     public static void main(String[] args) {
         SpringApplication.run(Launcher.class, args);
     }
+
     @Bean
     PredictionEngineClient predictionEngineClient() {
         Retrofit retrofit = new Retrofit.Builder()
@@ -19,4 +19,5 @@ public class Launcher {
 
         return retrofit.create(PredictionEngineClient.class);
     }
+
 }

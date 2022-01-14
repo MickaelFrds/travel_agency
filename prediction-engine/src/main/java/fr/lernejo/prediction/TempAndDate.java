@@ -3,8 +3,8 @@ package fr.lernejo.prediction;
 import java.util.Date;
 
 public class TempAndDate {
-    public String date;
-    public Number temperature;
+    final public String date;
+    final public Number temperature;
 
 
     TempAndDate(Number temperature,String date){

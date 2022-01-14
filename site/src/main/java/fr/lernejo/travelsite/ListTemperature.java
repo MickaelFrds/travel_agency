@@ -3,9 +3,15 @@ package fr.lernejo.travelsite;
 import java.util.ArrayList;
 
 public class ListTemperature {
-    public ArrayList<TempAndDate> listTemperatures;
+    final public String country;
+    final public ArrayList<TempAndDate> temperatures;
 
-    ListTemperature(){
-        this.listTemperatures = new ArrayList<>();
+    public ListTemperature(){
+        this.temperatures=null;
+        this.country=null;
+    }
+    public ListTemperature(String country, ArrayList<TempAndDate> temperatures){
+        this.country=country;
+        this.temperatures=temperatures;
     }
 }

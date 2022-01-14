@@ -1,11 +1,12 @@
 package fr.lernejo.travelsite;
 
 public class TempAndDate {
-    public Number temperature;
-    public String date;
+    final public String date;
+    final public Number temperature;
 
     TempAndDate(Number temperature, String date){
         this.date = date;
         this.temperature = temperature;
     }
+
 }
